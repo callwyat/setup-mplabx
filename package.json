@@ -1,0 +1,33 @@
+{
+  "name": "setup-mplabx",
+  "version": "0.0.0",
+  "description": "A Github action for setting up MPLABX and a Microchip Compiler",
+  "main": "./out/main.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "mocha"
+  },
+  "keywords": [
+    "MPLABX",
+    "Microchip",
+    "XC8",
+    "XC16",
+    "XC32"
+  ],
+  "author": "Wyatt Callister",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "eslint": "^8.56.0",
+    "mocha": "^10.3.0"
+  },
+  "dependencies": {
+  }
+}
